@@ -1,0 +1,13 @@
+fastapi
+uvicorn[standard]
+pydantic
+groq
+pdfplumber
+pyxirr
+feedparser
+python-multipart
+python-dotenv
+sqlalchemy
+bcrypt<4.0.0
+passlib
+pydantic[email]
