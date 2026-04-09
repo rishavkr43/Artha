@@ -7,6 +7,7 @@
 import { useState, useMemo, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useAuth } from '../context/AuthContext'
+import { API_BASE } from '../config/api'
 import {
     LineChart, Line, XAxis, YAxis, CartesianGrid,
     Tooltip, ResponsiveContainer, PieChart, Pie, Cell,
@@ -34,7 +35,7 @@ const T = {
     muted: '#9A9AAD',
 }
 
-const API_BASE = 'http://localhost:8000/api'
+
 
 const GOAL_TYPES = ['Home Purchase', 'Child Education', 'Retirement', 'Wedding', 'Vehicle', 'Travel', 'Business', 'Other']
 const GOAL_COLORS = ['#E8272A', '#F59E0B', '#10B981', '#3B82F6', '#8B5CF6', '#EC4899', '#14B8A6', '#F97316']

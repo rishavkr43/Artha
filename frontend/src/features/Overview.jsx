@@ -7,6 +7,7 @@ import { useNavigate } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import CountUp from 'react-countup'
 import { useAuth } from '../context/AuthContext'
+import { API_BASE } from '../config/api'
 import {
     Heart, Flame, FileText, BarChart3, Users,
     TrendingUp, IndianRupee, Wallet, ChevronRight,
@@ -36,7 +37,7 @@ export default function Overview() {
 
     useEffect(() => {
         if (!user?.email) return
-        fetch(`http://localhost:8000/api/dashboard/${encodeURIComponent(user.email)}`)
+        fetch(`${API_BASE}/dashboard/${encodeURIComponent(user.email)}`)
             .then(res => res.json())
             .then(json => {
                 setData(json)

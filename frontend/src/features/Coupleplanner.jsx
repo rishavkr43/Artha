@@ -7,7 +7,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import CountUp from 'react-countup'
 import { Users, Sparkles, X, Zap, Heart, TrendingUp, Shield, IndianRupee, CheckCircle } from 'lucide-react'
 
-const API_BASE = 'http://localhost:8000/api'
+import { API_BASE } from '../config/api'
 
 const INPUT_STYLE = {
     width: '100%', background: '#18181F',

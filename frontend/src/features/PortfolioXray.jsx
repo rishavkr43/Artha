@@ -9,7 +9,7 @@ import CountUp from 'react-countup'
 import { BarChart3, Upload, FileText, X, Sparkles, Zap, AlertTriangle, TrendingUp, TrendingDown, CheckCircle } from 'lucide-react'
 import { useAuth } from '../context/AuthContext'
 
-const API_BASE = 'http://localhost:8000/api'
+import { API_BASE } from '../config/api'
 
 // ── Mock portfolio data (simulates backend response) ──────────────────────────
 const MOCK_PORTFOLIO = [

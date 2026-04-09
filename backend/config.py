@@ -37,11 +37,14 @@ class Config:
     API_PREFIX: str = "/api"
 
     # CORS settings
-    CORS_ORIGINS: List[str] = [
+    # CORS settings — localhost for dev, FRONTEND_URL env var for production
+    _frontend_url: str = os.getenv("FRONTEND_URL", "")
+    CORS_ORIGINS: List[str] = list(filter(None, [
         "http://localhost:3000",
         "http://localhost:5173",
-        "http://localhost:8080"
-    ]
+        "http://localhost:8080",
+        os.getenv("FRONTEND_URL", ""),
+    ]))
 
     # Server settings
     HOST: str = "0.0.0.0"

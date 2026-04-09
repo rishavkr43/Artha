@@ -12,7 +12,7 @@ import {
 import { X, Sparkles, ChevronRight, RotateCcw, TrendingUp, AlertTriangle, CheckCircle } from 'lucide-react'
 import { useAuth } from '../context/AuthContext'
 
-const API_BASE = 'http://localhost:8000/api'
+import { API_BASE } from '../config/api'
 
 // ── 12 Questions across 6 dimensions ─────────────────────────────────────────
 const QUESTIONS = [

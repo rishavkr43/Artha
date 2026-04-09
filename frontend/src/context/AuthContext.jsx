@@ -3,13 +3,12 @@
 //  Provides: user, login, signup, logout, updateProfile
 // ─────────────────────────────────────────────────────────────────────────────
 import { createContext, useContext, useState, useEffect } from 'react'
+import { API_BASE } from '../config/api'
 
 const AuthContext = createContext(null)
 
 const STORAGE_KEY = 'artha_user'
 const USERS_KEY = 'artha_users' // array of {email, password, name, city, age}
-
-const API_BASE = 'http://localhost:8000/api'
 
 export function AuthProvider({ children }) {
     // Read cached user from storage on initial load
