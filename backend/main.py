@@ -2,6 +2,11 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from routes import money_health, fire_planner, tax_wizard, mf_xray, couples_planner, auth, dashboard
 from config import config, validate_config
+from database import engine, Base
+from models.db_models import User, MoneyHealthResult, FirePlan, TaxPlan, Portfolio
+
+# Auto-create all tables on startup (safe no-op if they already exist)
+Base.metadata.create_all(bind=engine)
 
 app = FastAPI(
     title=config.API_TITLE,
